@@ -7,10 +7,12 @@
 
 local set = vim.keymap.set
 
+-- Shikad: I disabled it to enable testing
 -- Tmux
-set("n", "<leader>ts", function()
-  vim.cmd("!tmux split-window -c " .. vim.fn.expand("%:p:h"))
-end, { noremap = true, silent = true })
+-- set("n", "<leader>ts", function()
+--   -- vim.cmd("!tmux split-window -c " .. vim.fn.expand("%:p:h"))
+--   vim.cmd("!tmux new-window -c " .. vim.fn.expand("%:p:h"))
+-- end, { noremap = true, silent = true })
 
 -- Suggestions (not working)
 set({ "i", "c" }, "<M-CR>", "<C-e><CR>", { noremap = true, silent = true })
