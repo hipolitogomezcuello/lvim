@@ -16,3 +16,7 @@ local set = vim.keymap.set
 
 -- Suggestions (not working)
 set({ "i", "c" }, "<M-CR>", "<C-e><CR>", { noremap = true, silent = true })
+set("n", "<leader>cp", function()
+  vim.fn.setreg("+", vim.fn.expand("%"))
+  print("Copied relative path to clipboard: " .. vim.fn.expand("%"))
+end, { desc = "Copy relative file path to clipboard" })

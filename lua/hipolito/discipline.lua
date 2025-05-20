@@ -35,4 +35,8 @@ function M.cowboy()
   end
 end
 
+vim.schedule(function()
+  vim.opt.clipboard = "unnamedplus"
+end)
+
 return M
