@@ -4,5 +4,8 @@ return {
     config = function()
       require("monokai-pro").setup()
     end,
+    opts = {
+      transparent_background = true,
+    },
   },
 }
