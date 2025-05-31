@@ -19,6 +19,9 @@ return {
             end
           end, { "i", "s", "c" }),
         },
+        sources = {
+          { name = "supermaven" },
+        },
       })
     end,
   },
