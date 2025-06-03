@@ -8,14 +8,41 @@ return {
         opts.capabilities.textDocument = opts.capabilities.textDocument or {}
         opts.capabilities.textDocument.semanticTokens = {
           tokenTypes = {
-            "namespace", "type", "class", "enum", "interface", "struct", "typeParameter", "parameter",
-            "variable", "property", "enumMember", "event", "function", "method", "macro", "keyword",
-            "modifier", "comment", "string", "number", "regexp", "operator"
+            "namespace",
+            "type",
+            "class",
+            "enum",
+            "interface",
+            "struct",
+            "typeParameter",
+            "parameter",
+            "variable",
+            "property",
+            "enumMember",
+            "event",
+            "function",
+            "method",
+            "macro",
+            "keyword",
+            "modifier",
+            "comment",
+            "string",
+            "number",
+            "regexp",
+            "operator",
           },
           tokenModifiers = {
-            "declaration", "definition", "readonly", "static", "deprecated", "abstract", "async",
-            "modification", "documentation", "defaultLibrary"
-          }
+            "declaration",
+            "definition",
+            "readonly",
+            "static",
+            "deprecated",
+            "abstract",
+            "async",
+            "modification",
+            "documentation",
+            "defaultLibrary",
+          },
         }
 
         require("lazyvim.util").lsp.on_attach(function(client)
@@ -44,7 +71,7 @@ return {
             },
             staticcheck = true,
             hints = {
-              assignVariableTypes = true,
+              assignVariableTypes = false,
               compositeLiteralFields = true,
               compositeLiteralTypes = true,
               constantValues = true,
